@@ -37,7 +37,7 @@ c. the data frame contains one kind of observation for subject/activity/variable
 The tidy paradigm seems to be respected.
 
 
-step7. Finally in this step we create the tidy final data set applying the ddply function.
-the final data set has dim 63x2. For each variable (63) has been calculated the mean
+step7. Finally in this step we create the tidy final data set applying the ddply function for each variable, for each subject_id and for each activity. 
+
 
 step8. Exporting the result to txt file
