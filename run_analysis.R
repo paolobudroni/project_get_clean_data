@@ -54,7 +54,7 @@ run_analysis <- function() {
 	## Next .. creating final data set with the meam for each variable/subcjet_id/activity
 	# require the plyr Package
 	require(plyr)
-	tdf < ddply(tidy_subset_df, .(tidy_subset_df$variable), summarise, mean = mean(value))
+	tdf <- ddply(tidy_subset_df, .(tidy_subset_df$variable), summarise, mean = mean(value))
 
 	#naming the column
 	colnames(tdf) <- c("variable","mean")
