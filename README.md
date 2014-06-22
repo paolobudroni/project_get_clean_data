@@ -30,6 +30,12 @@ the step is done calling the extractDataSet function sourced whit the "extractSu
 
 step6. Creating a tidy dataset starting from the dataset creating in the step 5.
 the data set is created with the "melt" function
+the new data frame is in tidy shape because:
+a. there is only one variable column with associated the value column
+b. each row contains an observation for that variable
+c. the data frame contains one kind of observation for subject/activity/variable.
+The tidy paradigm seems to be respected.
+
 
 step7. Finally in this step we create the tidy final data set applying the ddply function.
 the final data set has dim 63x2. For each variable (63) has been calculated the mean
