@@ -54,12 +54,14 @@ run_analysis <- function() {
 	## Next .. creating final data set with the meam for each variable/subcjet_id/activity
 	# require the plyr Package
 	require(plyr)
-	tidy_subset_final <<- ddply(tidy_subset_df, .(tidy_subset_df$variable), summarise, mean = mean(value))
-	
-	#naming the column
-	colnames(tidy_subset_final) <- c("variable","mean")
+	tdf < ddply(tidy_subset_df, .(tidy_subset_df$variable), summarise, mean = mean(value))
 
+	#naming the column
+	colnames(tdf) <- c("variable","mean")
+
+	tidy_subset_final <<- tdf
+	
 	#exporting the tidy final data set
-	write.table(tidy_subset_final, file="tidy_subset_final.txt")
+	write.table(tidy_subset_final, file="tidy_subset_final.txt",row.names=FALSE)
 	
 }
